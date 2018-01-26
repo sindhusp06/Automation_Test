@@ -2,8 +2,6 @@ package Generic;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
 
@@ -16,9 +14,8 @@ import org.openqa.selenium.WebDriver;
 
 public class AUL {
 	//Generic getProperty
-	public static String getProperty(String path,String key) throws FileNotFoundException, IOException
-	{
-		String v=" ";
+	public static String getProperty(String path,String key) {
+		String v="";
 		try
 	{
 		Properties p=new Properties();
@@ -30,7 +27,7 @@ public class AUL {
 	
 		}
 return v;
-}
+	}
 
 //Generic getRowcount
 public static int getRowCount(String path,String sheet)
